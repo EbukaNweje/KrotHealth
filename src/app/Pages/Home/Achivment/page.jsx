@@ -64,9 +64,9 @@ export const Achivment = () => {
           for Medical Equipment?
         </h1>
         <p className="text-white lg:text-xl text-xs text-justify lg:text-center lg:p-8">
-          Discover the difference our hospital's medical equipment can make in
+          Discover the difference our hospital&apos;s medical equipment can make in
           your healthcare experience. We offer a wide range of high-quality
-          hospital equipment designed to meet the needs of both medical
+          hospital&apos;s equipment designed to meet the needs of both medical
           professionals and patients. From state-of-the-art diagnostic tools to
           essential surgical instruments, our products are sourced from trusted
           manufacturers and rigorously tested for reliability and safety. Our

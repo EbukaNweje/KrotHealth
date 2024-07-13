@@ -87,7 +87,7 @@ const Contact = () => {
               onSubmit={formik.handleSubmit}
               className="flex flex-col w-full gap-4 "
             >
-              <p>Name </p>
+             
               <div className="flex flex-col w-full">
                 <label htmlFor="fullName">Full Name</label>
                 <input
