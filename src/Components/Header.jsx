@@ -52,7 +52,7 @@ export default function Header() {
               />
             )}
           </div>
-        <nav className="md:block hidden lg:block gap-8 lg:text-2xl text-sm w-96">
+        <nav className="md:block hidden lg:block gap-8 lg:text-2xl text-sm w-[60%] bg-slate-800">
           <Link href="/" className={getLinkClasses("/")}>
             Home
           </Link>
