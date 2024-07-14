@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { CgMenu } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useState } from "react";
-import "./Header.css";
+import "@/Components/Header.css";
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
