@@ -26,9 +26,9 @@ export default function Header() {
   };
 
   return (
-    <div className="header head">
+    <>
       <section className="shadow-lg lg:px-20 px-4 h-20 flex justify-between items-center fixed top-0 w-full bg-white z-50 ">
-        <article className="flex justify-between w-full lg:w-32 md:w-11">
+        <div className="flex justify-between w-full lg:w-32 md:w-11">
           <Link href="/">
             <h3 className="lg:text-2xl text-sm text-[#081a1c]">
               KROY<span className="text-[#04d15a]">Health</span>
@@ -51,9 +51,9 @@ export default function Header() {
               />
             )}
           </div>
-        </article>
+        </div>
 
-        <article className="md:hidden hidden lg:flex gap-8 lg:text-2xl text-sm">
+        <nav className="md:hidden hidden lg:flex gap-8 lg:text-2xl text-sm">
           <Link href="/" className={getLinkClasses("/")}>
             Home
           </Link>
@@ -63,14 +63,15 @@ export default function Header() {
           <Link href="/product" className={getLinkClasses("/product")}>
             Products
           </Link>
-        </article>
-        <article>
+        </nav>
+
+        <div>
           <Link href="/contact">
             <button className={getButtonClasses("/contact")}>
               Contact
             </button>
           </Link>
-        </article>
+        </div>
       </section>
 
       {menu && (
@@ -106,6 +107,6 @@ export default function Header() {
           </article>
         </header>
       )}
-    </div>
+    </>
   );
 }
