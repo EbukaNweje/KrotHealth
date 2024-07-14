@@ -76,6 +76,7 @@ const Contact = () => {
           </span>
         </div>
       </div>
+      
       <div className="fromlocation">
         <div className="fromlocation-wrapper">
           <div className="from mb-28">
@@ -85,9 +86,8 @@ const Contact = () => {
             </div>
             <form
               onSubmit={formik.handleSubmit}
-              className="flex flex-col w-full gap-4 "
+              className="flex flex-col w-full gap-4"
             >
-             
               <div className="flex flex-col w-full">
                 <label htmlFor="fullName">Full Name</label>
                 <input
@@ -98,16 +98,8 @@ const Contact = () => {
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
                 />
-                <p
-                  className={
-                    formik.errors.fullName
-                      ? "text-red-400 text-xs pb-4"
-                      : "pb-4"
-                  }
-                >
-                  {formik.touched.fullName && formik.errors.fullName
-                    ? formik.errors.fullName
-                    : ""}
+                <p className={formik.errors.fullName ? "text-red-400 text-xs pb-4" : "pb-4"}>
+                  {formik.touched.fullName && formik.errors.fullName ? formik.errors.fullName : ""}
                 </p>
               </div>
               <div className="flex flex-col w-full">
@@ -120,35 +112,23 @@ const Contact = () => {
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
                 />
-                <p
-                  className={
-                    formik.errors.email ? "text-red-400 text-xs pb-4" : "pb-4"
-                  }
-                >
-                  {formik.touched.email && formik.errors.email
-                    ? formik.errors.email
-                    : ""}
+                <p className={formik.errors.email ? "text-red-400 text-xs pb-4" : "pb-4"}>
+                  {formik.touched.email && formik.errors.email ? formik.errors.email : ""}
                 </p>
               </div>
               <div className="flex flex-col w-full">
                 <label htmlFor="message">Message</label>
                 <span className="border-2 border-gray-200">
-                <textarea
-                  className="w-full h-24 px-4 "
-                  name="message"
-                  value={formik.values.message}
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                />
+                  <textarea
+                    className="w-full h-24 px-4"
+                    name="message"
+                    value={formik.values.message}
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
+                  />
                 </span>
-                <p
-                  className={
-                    formik.errors.message ? "text-red-400 text-xs pb-4" : "pb-4"
-                  }
-                >
-                  {formik.touched.message && formik.errors.message
-                    ? formik.errors.message
-                    : ""}
+                <p className={formik.errors.message ? "text-red-400 text-xs pb-4" : "pb-4"}>
+                  {formik.touched.message && formik.errors.message ? formik.errors.message : ""}
                 </p>
               </div>
               <button
@@ -158,9 +138,7 @@ const Contact = () => {
                 {loading ? "Submitting..." : "Submit"}
               </button>
               {error && <p className="text-red-500">{error}</p>}
-              {successMessage && (
-                <p className="text-green-500">{successMessage}</p>
-              )}
+              {successMessage && <p className="text-green-500">{successMessage}</p>}
             </form>
           </div>
           <div className="location" id="map">
@@ -170,6 +148,7 @@ const Contact = () => {
               src="https://maps.google.com/maps?q=103%20Saint%20John%20St.%20Allentown,%20PA%2018103&t=&z=13&ie=UTF8&iwloc=&output=embed"
               frameBorder="0"
               scrolling="no"
+              title="Google Map"
             ></iframe>
           </div>
         </div>

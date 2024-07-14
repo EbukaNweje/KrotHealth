@@ -1,8 +1,9 @@
-import "../Pages/Home/Achivment/Achivment.css";
 
+
+  import "../Pages/Home/Achivment/Achivment.css";
+import Image from 'next/image';
 
 export default function Product() {
-
   const blogData = [
     {
       id: 1,
@@ -306,18 +307,17 @@ export default function Product() {
     },
   ];
 
-  return(
-    <section className="worker mt-20 flex flex-col ">
+  return (
+    <section className="worker mt-20 flex flex-col">
       <div className='Service-titlewhat p-8'>
-          <h3 className='lg:text-3xl text-lg text-green-500 text-center'>Products</h3>
-        </div> 
+        <h3 className='lg:text-3xl text-lg text-green-500 text-center'>Products</h3>
+      </div>
       <section className="worker-wrapper p-14 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4">
         {blogData.map((image) => (
-          <article className="worker-boxes rounded-md hover:shadow-lg hover:border-b hover:border-emerald-700 shadow-md  " key={image.id}>
+          <article className="worker-boxes rounded-md hover:shadow-lg hover:border-b hover:border-emerald-700 shadow-md" key={image.id}>
             <div className="worker-image">
-            <img src={image.imageUrl} alt={image.name} className=" rounded-md" />
-              <div className="worker-imagehover">
-              </div>
+              <Image src={image.imageUrl} alt={image.name} className="rounded-md" width={500} height={500} />
+              <div className="worker-imagehover"></div>
             </div>
             <div className="worker-text p-4">
               <h1>{image?.name}</h1>
@@ -325,9 +325,10 @@ export default function Product() {
             </div>
           </article>
         ))}
-        
       </section>
-      
     </section>
-        )
-    } 
+  );
+}
+
+
+  

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import "./About.css";
 
@@ -53,7 +54,7 @@ const About = () => {
           </div>
           <div className="Portfoilo-middle">
             <div className="portfoilo-images">
-              <img src="/assets/ceo.jpeg" alt="ceo" />
+              <Image src="/assets/ceo.jpeg" alt="ceo" width={500} height={500} />
               <div className="portfoilo-imageshover"></div>
             </div>
           </div>
