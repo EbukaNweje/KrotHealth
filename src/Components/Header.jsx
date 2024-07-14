@@ -37,14 +37,14 @@ export default function Header() {
           <div>
             {!menu ? (
               <CgMenu
-                className="lg:hidden md:hidden flex"
+                className="lg:hidden md:hidden block"
                 size={25}
                 onClick={toggleMenu}
                 aria-label="Open menu"
               />
             ) : (
               <AiFillCloseCircle
-                className="lg:hidden md:hidden flex"
+                className="lg:hidden md:hidden block"
                 size={25}
                 onClick={toggleMenu}
                 aria-label="Close menu"
