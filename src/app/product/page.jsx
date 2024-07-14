@@ -1,32 +1,35 @@
-
-
-  import "../Pages/Home/Achivment/Achivment.css";
-import Image from 'next/image';
+import Image from "next/image";
+import "@/app/Pages/Home/Achivment.css";
 
 export default function Product() {
+  
   const blogData = [
     {
       id: 1,
       name: "Portable X-ray Machines",
-      description: "State-of-the-art portable X-ray machines for accurate diagnostics on the go.",
+      description:
+        "State-of-the-art portable X-ray machines for accurate diagnostics on the go.",
       imageUrl: "/assets/x-ray.jpg",
     },
     {
       id: 2,
       name: "Microscopes",
-      description: "High-resolution microscopes for precise and detailed examination.",
+      description:
+        "High-resolution microscopes for precise and detailed examination.",
       imageUrl: "/assets/microscopes.jpeg",
     },
     {
       id: 3,
       name: "Ultrasound Machines",
-      description: "Advanced ultrasound machines for clear and accurate imaging.",
+      description:
+        "Advanced ultrasound machines for clear and accurate imaging.",
       imageUrl: "/assets/ultra-scan.jpeg",
     },
     {
       id: 4,
       name: "MRI Scanners",
-      description: "High-performance MRI scanners for detailed and accurate scans.",
+      description:
+        "High-performance MRI scanners for detailed and accurate scans.",
       imageUrl: "/assets/mri-scaner.jpg",
     },
     {
@@ -38,7 +41,8 @@ export default function Product() {
     {
       id: 6,
       name: "Patient Monitors",
-      description: "Reliable patient monitors for continuous vital signs tracking.",
+      description:
+        "Reliable patient monitors for continuous vital signs tracking.",
       imageUrl: "/assets/p-m.jpeg",
     },
     {
@@ -68,13 +72,15 @@ export default function Product() {
     {
       id: 11,
       name: "Anesthesia Machines",
-      description: "State-of-the-art anesthesia machines for safe and effective anesthesia delivery.",
+      description:
+        "State-of-the-art anesthesia machines for safe and effective anesthesia delivery.",
       imageUrl: "/assets/a-m.jpeg",
     },
     {
       id: 12,
       name: "Surgical Instruments",
-      description: "High-quality surgical instruments for precise surgical procedures.",
+      description:
+        "High-quality surgical instruments for precise surgical procedures.",
       imageUrl: "/assets/Surgical-Instruments.webp",
     },
     {
@@ -86,7 +92,8 @@ export default function Product() {
     {
       id: 14,
       name: "Oxygen Concentrators",
-      description: "Reliable oxygen concentrators for supplemental oxygen therapy.",
+      description:
+        "Reliable oxygen concentrators for supplemental oxygen therapy.",
       imageUrl: "/assets/Oxygen-Concentrators.jpeg",
     },
     {
@@ -98,7 +105,8 @@ export default function Product() {
     {
       id: 16,
       name: "Patient Warmers",
-      description: "Efficient patient warmers for maintaining body temperature.",
+      description:
+        "Efficient patient warmers for maintaining body temperature.",
       imageUrl: "/assets/Patient-Warmers.jpeg",
     },
     {
@@ -116,7 +124,8 @@ export default function Product() {
     {
       id: 19,
       name: "Thermometers",
-      description: "Reliable thermometers for accurate temperature measurement.",
+      description:
+        "Reliable thermometers for accurate temperature measurement.",
       imageUrl: "/assets/Thermometers.jpeg",
     },
     {
@@ -140,7 +149,8 @@ export default function Product() {
     {
       id: 23,
       name: "Medical Lights",
-      description: "Efficient medical lights for surgical and diagnostic procedures.",
+      description:
+        "Efficient medical lights for surgical and diagnostic procedures.",
       imageUrl: "/assets/Medical-Lightss.jpeg",
     },
     {
@@ -152,7 +162,8 @@ export default function Product() {
     {
       id: 25,
       name: "Dental Equipment",
-      description: "Comprehensive dental equipment for professional dental care.",
+      description:
+        "Comprehensive dental equipment for professional dental care.",
       imageUrl: "/assets/Dental-Equipment.jpeg",
     },
     {
@@ -206,7 +217,8 @@ export default function Product() {
     {
       id: 34,
       name: "Medical Freezers",
-      description: "Reliable medical freezers for temperature-sensitive storage.",
+      description:
+        "Reliable medical freezers for temperature-sensitive storage.",
       imageUrl: "/assets/Medical-Freezers.jpeg",
     },
     {
@@ -309,14 +321,25 @@ export default function Product() {
 
   return (
     <section className="worker mt-20 flex flex-col">
-      <div className='Service-titlewhat p-8'>
-        <h3 className='lg:text-3xl text-lg text-green-500 text-center'>Products</h3>
+      <div className="Service-titlewhat p-8">
+        <h3 className="lg:text-3xl text-lg text-green-500 text-center">
+          Products
+        </h3>
       </div>
       <section className="worker-wrapper p-14 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4">
         {blogData.map((image) => (
-          <article className="worker-boxes rounded-md hover:shadow-lg hover:border-b hover:border-emerald-700 shadow-md" key={image.id}>
+          <article
+            className="worker-boxes rounded-md hover:shadow-lg hover:border-b hover:border-emerald-700 shadow-md"
+            key={image.id}
+          >
             <div className="worker-image">
-              <Image src={image.imageUrl} alt={image.name} className="rounded-md" width={500} height={500} />
+              <Image
+                src={image.imageUrl}
+                alt={image.name}
+                className="rounded-md"
+                width={500}
+                height={500}
+              />
               <div className="worker-imagehover"></div>
             </div>
             <div className="worker-text p-4">
@@ -329,6 +352,3 @@ export default function Product() {
     </section>
   );
 }
-
-
-  
