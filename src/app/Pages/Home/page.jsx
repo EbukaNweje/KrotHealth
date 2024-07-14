@@ -360,7 +360,7 @@ export default function LandinPage() {
             </ul>
             <div className="btn">
               <div className="btn1">
-                <Link href="/product" className="nav-active">
+                <Link href="/product" className="nav-active text-white">
                   View Products
                 </Link>
               </div>
