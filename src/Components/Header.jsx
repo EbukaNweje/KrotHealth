@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <>
-      <section className="shadow-lg lg:px-20 px-4 h-20 flex justify-between items-center fixed top-0 w-full bg-white z-50">
+      <section className="shadow-lg lg:px-20 px-4 h-24 flex justify-between items-center fixed top-0 w-full bg-white z-50">
         <div className="flex justify-between w-full lg:w-32 md:w-11">
           <Link href="/">
             <h3 className="lg:text-2xl text-sm text-[#081a1c] cursor-pointer">
