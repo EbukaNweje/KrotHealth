@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import { CgMenu } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useState } from "react";
-import "@/Components/Header.css";
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
@@ -16,8 +15,8 @@ export default function Header() {
 
   const getLinkClasses = (path) => {
     return pathname === path
-      ? "text-red-500 text-xl hover:text-green-500 border-b-2 border-red-500"
-      : "text-[#081a1c] text-xl hover:text-green-500";
+      ? "text-red-500 text-xl hover:text-green-500 border-b-2 border-red-500 px-4"
+      : "text-[#081a1c] text-xl hover:text-green-500 px-4 ";
   };
 
   const getButtonClasses = (path) => {
@@ -28,7 +27,7 @@ export default function Header() {
 
   return (
     <div className="header head">
-      <section className="header-section shadow-lg lg:px-20 px-4">
+      <section className="shadow-lg lg:px-20 px-4 h-20 flex justify-between items-center fixed top-0 w-full bg-white z-50 ">
         <article className="flex justify-between w-full lg:w-32 md:w-11">
           <Link href="/">
             <h3 className="lg:text-2xl text-sm text-[#081a1c]">
@@ -54,7 +53,7 @@ export default function Header() {
           </div>
         </article>
 
-        <article className="header-navs md:hidden lg:text-2xl text-sm">
+        <article className="md:hidden hidden lg:flex gap-8 lg:text-2xl text-sm">
           <Link href="/" className={getLinkClasses("/")}>
             Home
           </Link>
@@ -75,7 +74,7 @@ export default function Header() {
       </section>
 
       {menu && (
-        <header className="showmenu -mt-3 z-40">
+        <header className="showmenu z-40 absolute lg:hidden top-20 w-full bg-white">
           <article className="showmenu-navs space-y-4">
             <Link href="/" onClick={toggleMenu} className={getLinkClasses("/")}>
               Home
