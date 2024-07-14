@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import "./Home.css";
+import "@/app/Pages/Home/Home.css";
 import {
   FaRegHeart,
   FaRegSmile,
@@ -375,7 +375,7 @@ export default function LandinPage() {
             <Image
               src="/assets/hero.png"
               alt="Home Image"
-              className="w-[85%] h-full mt-10"
+              className="w-[85%] h-[94%] mt-10"
               width={500}
               height={500}
             />
