@@ -34,7 +34,8 @@ export default function Header() {
               KROY<span className="text-[#04d15a]">Health</span>
             </h3>
           </Link>
-          <div className="mr-10 lg:hidden md:hidden block">
+        </div>
+        <div className="mr-10 lg:hidden md:hidden block">
             {!menu ? (
               <CgMenu
                 className="lg:hidden md:hidden block cursor-pointer"
@@ -51,9 +52,7 @@ export default function Header() {
               />
             )}
           </div>
-        </div>
-
-        <nav className="md:hidden hidden lg:block gap-8 lg:text-2xl text-sm ">
+        <nav className="md:block hidden lg:block gap-8 lg:text-2xl text-sm w-96">
           <Link href="/" className={getLinkClasses("/")}>
             Home
           </Link>
