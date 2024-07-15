@@ -3,40 +3,35 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CgMenu } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { useState } from "react";
 
 export default function Header() {
-  const [menu, setMenu] = useState(false);
   const pathname = usePathname();
 
-  const toggleMenu = () => {
-    setMenu(!menu);
-  };
 
   const getLinkClasses = (path) => {
     return pathname === path
-      ? "text-red-500 text-xl hover:text-green-500 border-b-2 border-red-500 px-4"
-      : "text-[#081a1c] text-xl hover:text-green-500 px-4";
+      ? "text-red-500 lg:text-xl md:text-sm text-sm hover:text-green-500 border-b-2 border-red-500 px-2"
+      : "lg:text-[#081a1c] hover:text-green-500 px-2 lg:text-xl md:text-sm text-sm ";
   };
 
   const getButtonClasses = (path) => {
     return pathname === path
-      ? "px-10 bg-red-600 py-3 text-white rounded-md hover:bg-red-200 hover:text-red-900 text-lg"
-      : "px-10 bg-green-600 py-3 text-white rounded-md hover:bg-green-200 hover:text-green-900 text-lg";
+      ? "lg:px-10 md:px-4 px-2 bg-red-600 py-3 text-white rounded-md hover:bg-red-200 hover:text-red-900 text-lg md:text-sm text-xs  "
+      : "lg:px-10 md:px-4 px-2 bg-green-600 py-3 text-white rounded-md hover:bg-green-200 hover:text-green-900 text-lg md:text-sm text-xs";
   };
 
   return (
     <>
-      <section className="shadow-lg lg:px-20 px-4 h-24 lg:flex hidden md:hidden justify-between items-center sticky top-0 w-full bg-white z-50">
-        <div className="flex justify-between w-full lg:w-32 md:w-11">
+      <section className="shadow-lg lg:px-20  md:px-10 px-2 h-20 flex justify-between items-center fixed top-0 w-full bg-white z-50 ">
+        <article className="">
           <Link href="/">
-            <h3 className="lg:text-2xl text-sm text-[#081a1c] cursor-pointer">
+            <h3 className="lg:text-2xl md:text-sm text-xs text-[#081a1c]">
               KROY<span className="text-[#04d15a]">Health</span>
             </h3>
           </Link>
-        </div>
+        </article>
 
-        <nav className="md:block hidden lg:flex gap-8 lg:text-2xl text-sm ">
+        <nav className="flex lg:gap-8 md:gap-4 gap-1">
           <Link href="/" className={getLinkClasses("/")}>
             Home
           </Link>
@@ -47,76 +42,15 @@ export default function Header() {
             Products
           </Link>
         </nav>
-
-        <div>
+        <article>
           <Link href="/contact">
             <button className={getButtonClasses("/contact")}>
               Contact
             </button>
           </Link>
-        </div>
+        </article>
       </section>
 
-      <section className="shadow-lg px-4 h-24 flex justify-between flex-row items-center opacity-100 sticky lg:opacity-0  md:flex  top-0 w-full bg-white z-50">
-        <div className="flex justify-between w-full lg:w-32 md:w-11">
-          <Link href="/">
-            <h3 className="lg:text-2xl text-sm text-[#081a1c] cursor-pointer">
-              KROY<span className="text-[#04d15a]">Health</span>
-            </h3>
-          </Link>
-        </div>
-        <div className="mr-10 lg:hidden md:block block">
-            {!menu ? (
-              <CgMenu
-                className="lg:hidden md:block block cursor-pointer"
-                size={25}
-                onClick={toggleMenu}
-                aria-label="Open menu"
-              />
-            ) : (
-              <AiFillCloseCircle
-                className="lg:hidden md:block block cursor-pointer"
-                size={25}
-                onClick={toggleMenu}
-                aria-label="Close menu"
-              />
-            )}
-          </div>
-      </section>
-
-      {menu && (
-        <header className="showmenu z-40 absolute lg:hidden mt-10 w-full bg-white">
-          <article className="showmenu-navs space-y-4">
-            <Link href="/" onClick={toggleMenu} className={getLinkClasses("/")}>
-              Home
-            </Link>
-            <hr />
-            <Link
-              href="/about"
-              onClick={toggleMenu}
-              className={getLinkClasses("/about")}
-            >
-              About Us
-            </Link>
-            <hr />
-            <Link
-              href="/product"
-              onClick={toggleMenu}
-              className={getLinkClasses("/product")}
-            >
-              Products
-            </Link>
-            <hr />
-            <Link
-              href="/contact"
-              onClick={toggleMenu}
-              className={getLinkClasses("/contact")}
-            >
-              Contact
-            </Link>
-          </article>
-        </header>
-      )}
     </>
   );
 }
