@@ -21,8 +21,8 @@ export default function Header() {
 
   const getButtonClasses = (path) => {
     return pathname === path
-      ? "px-10 bg-red-600 py-3 text-white rounded-md hover:bg-red-200 hover:text-red-900 text-lg lg:block md:block hidden"
-      : "px-10 bg-green-600 py-3 text-white rounded-md hover:bg-green-200 hover:text-green-900 text-lg lg:block md:block hidden";
+      ? "px-10 bg-red-600 py-3 text-white rounded-md hover:bg-red-200 hover:text-red-900 text-lg"
+      : "px-10 bg-green-600 py-3 text-white rounded-md hover:bg-green-200 hover:text-green-900 text-lg";
   };
 
   return (
@@ -57,7 +57,7 @@ export default function Header() {
         </div>
       </section>
 
-      <section className="shadow-lg px-4 h-24 flex justify-between flex-row items-center sticky lg:hidden md:flex  top-0 w-full bg-white z-50">
+      <section className="shadow-lg px-4 h-24 flex justify-between flex-row items-center opacity-100 sticky lg:opacity-0  md:flex  top-0 w-full bg-white z-50">
         <div className="flex justify-between w-full lg:w-32 md:w-11">
           <Link href="/">
             <h3 className="lg:text-2xl text-sm text-[#081a1c] cursor-pointer">

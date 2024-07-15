@@ -168,7 +168,7 @@ font-size: 18px;
 
 .Portfoilo-mainDiv {
   height: 100%;
-  width: 60%;
+  width: 90%;
   display: flex;
 }
 
@@ -417,7 +417,7 @@ background-color: rgb(9, 11, 11);
   line-height: 1.5;
 }
 .Portfoilo-left{
-  width: 40%;
+  width: 90%;
   height: 100%;
   padding-inline-start:10px ;
   }

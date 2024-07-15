@@ -37,7 +37,7 @@ const About = () => {
             <div className="portfoilo-title">
               <p>Message from the CEO</p>
             </div>
-            <div className="portfoilo-text">
+            <div className="portfoilo-text p-4">
               <p>
                 We provide top-quality medical equipment to enhance patient care
                 and support healthcare professionals. Trust us for innovative
