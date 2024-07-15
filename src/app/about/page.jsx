@@ -20,16 +20,14 @@ const About = () => {
         </div>
         <div className="lg:px-14 px-6 lg:text-center text-justify">
           <p>
-            At our hospital, we are dedicated to providing comprehensive care to
-            meet all your health needs. From immediate, life-saving emergency
-            services and advanced surgical procedures to state-of-the-art
-            radiology for precise diagnostics, our expert team is here for you.
-            We offer specialized treatment options in cancer care, cardiology,
-            and orthopedics to ensure you receive the best possible care.
-            Additionally, our personalized rehabilitation programs, dedicated
-            mental health support, and compassionate pediatric services are
-            designed to help you and your family achieve optimal health and
-            well-being.
+            KROT health has been in business for decades and has successful
+            supplied over 100 medical equipments to various hospitals and
+            medical centers both within and out of the States. We all have our
+            own unique idea of what it means to live fully, but there&apos;s one
+            thing we share: We each want to live the best life we can. Join us
+            as we explore what it means to live fully &ndash; both as individuals and
+            as communities. We are proud of achievement and still striving to
+            serve more. Good health is our priority
           </p>
         </div>
       </header>
@@ -54,7 +52,12 @@ const About = () => {
           </div>
           <div className="Portfoilo-middle">
             <div className="portfoilo-images">
-              <Image src="/assets/ceo.jpeg" alt="ceo" width={500} height={500} />
+              <Image
+                src="/assets/ceo.jpeg"
+                alt="ceo"
+                width={500}
+                height={500}
+              />
               <div className="portfoilo-imageshover"></div>
             </div>
           </div>
