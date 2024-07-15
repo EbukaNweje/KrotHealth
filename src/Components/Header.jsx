@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <>
-      <section className="shadow-lg lg:px-20 px-4 h-24 flex justify-between items-center fixed top-0 w-full bg-white z-50">
+      <section className="shadow-lg lg:px-20 px-4 h-24 lg:flex hidden md:hidden justify-between items-center sticky top-0 w-full bg-white z-50">
         <div className="flex justify-between w-full lg:w-32 md:w-11">
           <Link href="/">
             <h3 className="lg:text-2xl text-sm text-[#081a1c] cursor-pointer">
@@ -35,24 +35,8 @@ export default function Header() {
             </h3>
           </Link>
         </div>
-        <div className="mr-10 lg:hidden md:hidden block">
-            {!menu ? (
-              <CgMenu
-                className="lg:hidden md:hidden block cursor-pointer"
-                size={25}
-                onClick={toggleMenu}
-                aria-label="Open menu"
-              />
-            ) : (
-              <AiFillCloseCircle
-                className="lg:hidden md:hidden block cursor-pointer"
-                size={25}
-                onClick={toggleMenu}
-                aria-label="Close menu"
-              />
-            )}
-          </div>
-        <nav className="md:block hidden lg:block gap-8 lg:text-2xl text-sm w-[60%] bg-slate-800">
+
+        <nav className="md:block hidden lg:flex gap-8 lg:text-2xl text-sm ">
           <Link href="/" className={getLinkClasses("/")}>
             Home
           </Link>
@@ -71,6 +55,33 @@ export default function Header() {
             </button>
           </Link>
         </div>
+      </section>
+
+      <section className="shadow-lg px-4 h-24 flex justify-between flex-row items-center sticky lg:hidden md:flex  top-0 w-full bg-white z-50">
+        <div className="flex justify-between w-full lg:w-32 md:w-11">
+          <Link href="/">
+            <h3 className="lg:text-2xl text-sm text-[#081a1c] cursor-pointer">
+              KROY<span className="text-[#04d15a]">Health</span>
+            </h3>
+          </Link>
+        </div>
+        <div className="mr-10 lg:hidden md:block block">
+            {!menu ? (
+              <CgMenu
+                className="lg:hidden md:block block cursor-pointer"
+                size={25}
+                onClick={toggleMenu}
+                aria-label="Open menu"
+              />
+            ) : (
+              <AiFillCloseCircle
+                className="lg:hidden md:block block cursor-pointer"
+                size={25}
+                onClick={toggleMenu}
+                aria-label="Close menu"
+              />
+            )}
+          </div>
       </section>
 
       {menu && (
